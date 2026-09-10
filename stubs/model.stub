@@ -1,0 +1,19 @@
+<?php
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+{{ factoryImport }}
+use App\Traits\HasUuid;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Attributes\RouteKey;
+use Illuminate\Database\Eloquent\Attributes\Fillable;
+
+#[RouteKey('uuid')]
+#[Fillable([])]
+class {{ class }} extends Model
+{
+    use HasUuid;
+
+    protected $table = '';
+}
